@@ -1,0 +1,32 @@
+﻿@page
+@model WebApplication6.Pages.StudentsModel
+@using WebApplication6.Models;
+@{
+}
+<table class="table">
+
+    <thead>
+        <tr>
+            <td>ID Student</td>
+            <td> Name Student</td>
+            <td>Meeting</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Student s in Model.Students)
+        {
+            <tr>
+                <td>@s.idstudent</td>
+                <td>@s.namestudent</td>
+                <td>@s.idmeet</td>
+                <td>
+                    <a class="btn btn-primary" href="SelectStudent?idst=@s.idstudent">Select</a>
+                </td>
+            </tr>
+            
+        }
+    </tbody>
+</table>
+
+
+<a class="btn btn-primary" href="Add">Add Student</a>

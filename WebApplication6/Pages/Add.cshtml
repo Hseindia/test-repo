@@ -1,0 +1,20 @@
+﻿@page
+@model WebApplication6.Pages.AddModel
+@{
+}
+@using WebApplication6.Models;
+<form method="post">
+    ID student<br />
+    <input type="text" class="form-control" name="id" />
+    Name Student<br /><input type="text" class="form-control" name="name" />
+    Select Meeting <br />
+    <select name="meet">
+        @foreach(Meeting m in @Model.MeetingList)
+        {
+            <option value="@m.idmeeting">@m.rpassword</option>
+        
+        }
+    </select>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
